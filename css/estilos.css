@@ -1,0 +1,475 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Merienda", cursive;
+    font-size: 1.6rem;
+    text-align: justify;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: "Merienda", cursive;
+    font-size: 1.4rem;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+/* HEADER */
+
+.logo {
+    width: 100%;
+    background-color: #f4edca;
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    background-color: #755319;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+}
+
+.nav-item {
+    padding: 10px 30px;
+}
+
+.nav-link {
+    color: #f4edca;
+}
+
+.nav-item:hover {
+    background-color: rgba(78, 53, 10, 0.651);
+}
+
+.nav-link:visited {
+    color: #f4edca;
+}
+
+/* MAIN */
+
+.seccionUno {
+    width: 100%;
+    margin: auto;
+}
+
+.seccionUno h1 {
+    padding: 10%;
+}
+
+.tortas,
+.cupcakes {
+    height: 75vh;
+    background-color: #f4edca;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5vw;
+    align-items: center;
+}
+
+.alfajores,
+.masitas {
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5vw;
+    align-items: center;
+}
+
+.cont,
+.cont img {
+    width: 25vw;
+}
+
+.cont img {
+    transition: all 1s ease;
+}
+
+.cont img:hover {
+    width: 26vw;
+    opacity: 0.8;
+}
+
+.seccionTres {
+    width: 100%;
+    margin: auto;
+    background-color: #755319;
+    color: #f4edca;
+}
+
+.seccionTres h1 {
+    padding: 10%;
+}
+
+.seccionCuatro {
+    width: 100%;
+    height: 60vh;
+    margin: auto;
+    padding: 0 100px;
+    background-color: #f4edca;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+        "tituloCuatro tituloCuatro tituloCuatro"
+        "primerP segundoP tercerP";
+    column-gap: 50px;
+    align-items: center;
+    justify-items: center;
+}
+
+.tituloCuatro {
+    grid-area: tituloCuatro;
+    align-self: flex-end;
+}
+
+.primerP {
+    grid-area: primerP;
+}
+
+.segundoP {
+    grid-area: segundoP;
+}
+
+.tercerP {
+    grid-area: tercerP;
+}
+
+.seccionCinco {
+    width: 40%;
+    height: 60vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+        "tituloCinco tituloCinco tituloCinco tituloCinco"
+        "fb ig wp tt";
+    align-items: center;
+    justify-items: center;
+}
+
+.tituloCinco {
+    grid-area: tituloCinco;
+    align-self: flex-end;
+}
+
+.fb {
+    grid-area: fb;
+}
+
+.ig {
+    grid-area: ig;
+}
+
+.wp {
+    grid-area: wp;
+}
+
+.tt {
+    grid-area: tt;
+}
+
+.fb:hover,
+.ig:hover,
+.wp:hover,
+.tt:hover {
+    opacity: 0.5;
+}
+
+/*FOOTER*/
+
+footer {
+    width: 100%;
+    background-color: #755319;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.logoFooter a img {
+    width: 200px;
+    padding: 10% 0;
+}
+
+/*SERVICIOS*/
+
+.detalles {
+    width: 100vw;
+    margin: auto;
+}
+
+.detalles h1 {
+    padding: 10%;
+}
+
+.primero,
+.segundo,
+.tercero {
+    width: 100vw;
+    height: 70vh;
+    margin: 50px 0;
+    padding: 0 50px;
+    background-color: #f4edca;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5vw;
+    justify-items: center;
+    align-items: center;
+}
+
+.imgPrimero img,
+.imgSegundo img,
+.imgTercero img {
+    width: 500px;
+}
+
+/* QUERRIES */
+
+@media screen and (max-width: 1000px) {
+    h1,
+    p,
+    h2 {
+        font-size: 1rem;
+    }
+
+    .seccionDos {
+        padding: 20px;
+        background-color: #f4edca;
+    }
+
+    .tortas,
+    .cupcakes {
+        display: inline;
+    }
+
+    .alfajores,
+    .masitas {
+        display: inline;
+    }
+
+    .cont {
+        width: 100%;
+        align-self: center;
+    }
+
+    .cont img,
+    .vacio {
+        display: none;
+    }
+
+    .seccionCuatro {
+        width: 100%;
+        height: 60vh;
+        margin: auto;
+        padding: 0 50px;
+        background-color: #f4edca;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr;
+        grid-template-areas:
+            "tituloCuatro"
+            "primerP"
+            "segundoP"
+            "tercerP";
+        align-items: center;
+        justify-items: center;
+    }
+
+    .seccionCinco {
+        width: 80%;
+        height: 60vh;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas:
+            "tituloCinco tituloCinco tituloCinco tituloCinco"
+            "fb ig wp tt";
+        align-items: center;
+        justify-items: center;
+    }
+
+    .tituloCinco {
+        grid-area: tituloCinco;
+        align-self: flex-end;
+    }
+
+    .fb {
+        grid-area: fb;
+    }
+
+    .ig {
+        grid-area: ig;
+    }
+
+    .wp {
+        grid-area: wp;
+    }
+
+    .tt {
+        grid-area: tt;
+    }
+
+    .primero,
+    .segundo,
+    .tercero {
+        width: 100vw;
+        height: 400px;
+        margin: 50px 0;
+        padding: 0 50px;
+        background-color: #f4edca;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 5vw;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .imgPrimero img,
+    .imgSegundo img,
+    .imgTercero img {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .logo img {
+        width: 300px;
+    }
+
+    .nav {
+        background-color: #755319;
+        width: 100%;
+        list-style-type: none;
+        display: inline-block;
+        align-items: center;
+        font-family: "Inter", sans-serif;
+    }
+
+    .nav-item {
+        padding: 10px 30px;
+    }
+
+    .nav-link {
+        color: #f4edca;
+    }
+
+    .logoFooter a img {
+        width: 100px;
+        padding: 5% 0;
+    }
+
+    .servicios {
+        background-color: #f4edca;
+        padding-bottom: 20px;
+    }
+
+    .primero,
+    .segundo,
+    .tercero {
+        width: 100vw;
+        height: 0;
+        margin: 10px 0;
+        padding: 20px 10px;
+
+        display: inline-block;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .imgPrimero img,
+    .imgSegundo img,
+    .imgTercero img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1,
+    p,
+    h2 {
+        font-size: 0.8rem;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .seccionCuatro {
+        width: 100%;
+        height: 60vh;
+        margin: auto;
+        padding: 0 20px;
+        background-color: #f4edca;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr;
+        grid-template-areas:
+            "tituloCuatro"
+            "primerP"
+            "segundoP"
+            "tercerP";
+        align-items: center;
+        justify-items: center;
+    }
+
+    .seccionCinco {
+        width: 80%;
+        height: 40vh;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 2fr;
+        grid-template-areas:
+            "tituloCinco tituloCinco tituloCinco tituloCinco"
+            "fb ig wp tt";
+        align-items: center;
+        justify-items: center;
+    }
+
+    .tituloCinco {
+        grid-area: tituloCinco;
+        align-self: flex-end;
+    }
+
+    .fb {
+        grid-area: fb;
+    }
+
+    .ig {
+        grid-area: ig;
+    }
+
+    .wp {
+        grid-area: wp;
+    }
+
+    .tt {
+        grid-area: tt;
+    }
+
+    .fb img,
+    .ig img,
+    .wp img,
+    .tt img {
+        width: 50px;
+    }
+}
